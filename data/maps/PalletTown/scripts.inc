@@ -199,6 +199,7 @@ PalletTown_EventScript_OakTrigger::
 	delay 30
 	msgbox PalletTown_Text_OakGrassUnsafeNeedMon
 	closemessage
+	setflag FLAG_SYS_B_DASH
 	delay 30
 	call_if_eq VAR_TEMP_1, 0, PalletTown_EventScript_OakLeadPlayerToLabLeft
 	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_OakLeadPlayerToLabRight

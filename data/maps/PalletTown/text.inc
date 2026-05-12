@@ -3,7 +3,15 @@ PalletTown_Text_OakDontGoOut::
     .string "Don't go out!$"
 
 PalletTown_Text_OakGrassUnsafeNeedMon::
-    .string "OAK: It's unsafe!\n"
+    .string "OAK: Do you even know\n"
+    .string "how to run?\p"
+    .string "You do it by holding the\n"
+    .string "B button while walking.\p"
+    .string "However you can't run indoors.\p"
+    .string "Although I don't think that\n"
+    .string "anyone would actually stop you.\p"
+    .string "...Oh, about walking out here:\p"
+    .string "It's unsafe!\n"
     .string "Wild POKéMON live in tall grass!\p"
     .string "You need your own POKéMON for\n"
     .string "your protection.\p"
