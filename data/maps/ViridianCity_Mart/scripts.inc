@@ -64,6 +64,7 @@ ViridianCity_Mart_EventScript_Clerk::
 	.align 2
 ViridianCity_Mart_Items::
 	.2byte ITEM_POKE_BALL
+	.2byte ITEM_RARE_CANDY
 	.2byte ITEM_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
