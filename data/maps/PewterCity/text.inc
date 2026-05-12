@@ -148,6 +148,8 @@ PewterCity_Text_RunningShoesLetterFromMom::
     .string "Dear {PLAYER},\p"
     .string "Here is a pair of RUNNING SHOES\n"
     .string "for my beloved challenger.\p"
+    .string "You can run in any shoes, but\n"
+    .string "these are more comfortable.\p"
     .string "Remember, I'll always cheer for\n"
     .string "you! Don't ever give up!\p"
     .string "From Mom$"
