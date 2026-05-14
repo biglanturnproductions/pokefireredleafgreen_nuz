@@ -253,11 +253,11 @@ bool8 RS_IsRunningDisallowed(u8 r0)
 bool32 IsRunningDisallowed(u8 metatileBehavior)
 {
     if (!gMapHeader.allowRunning)
-        return TRUE;
+        return FALSE;
     if (MetatileBehaviorForbidsBiking(metatileBehavior) != TRUE)
         return FALSE;
     else
-        return TRUE;
+        return FALSE;
 }
 
 static bool8 MetatileBehaviorForbidsBiking(u8 metatileBehavior)
