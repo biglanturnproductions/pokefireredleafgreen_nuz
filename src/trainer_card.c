@@ -1301,8 +1301,8 @@ static void PrintHofDebutTimeOnCard(void)
 {
     if (sTrainerCardDataPtr->hasHofResult)
     {
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], sTrainerCardHofDebutXPositions[sTrainerCardDataPtr->cardType], 35, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_HallOfFameDebut);
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 164, 35, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_HOF_TIME]);
+        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], sTrainerCardHofDebutXPositions[sTrainerCardDataPtr->cardType], 99, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_HallOfFameDebut);
+        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 164, 99, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_HOF_TIME]);
     }
 }
 
@@ -1310,81 +1310,81 @@ static void BufferLinkBattleResults(void)
 {
     u8 buffer[30];
 
-    if (sTrainerCardDataPtr->hasLinkResults)
-    {
+//    if (sTrainerCardDataPtr->hasLinkResults)
+//    {
         StringCopy(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_LINK_RECORD], sLinkTrainerCardRecordStrings[sTrainerCardDataPtr->cardType]);
         StringCopy(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_WIN_LOSS], gText_WinLossRatio);
         ConvertIntToDecimalStringN(buffer, sTrainerCardDataPtr->trainerCard.rse.linkBattleWins, STR_CONV_MODE_RIGHT_ALIGN, 4);
         StringCopy(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_LINK_WINS], buffer);
         ConvertIntToDecimalStringN(buffer, sTrainerCardDataPtr->trainerCard.rse.linkBattleLosses, STR_CONV_MODE_RIGHT_ALIGN, 4);
         StringCopy(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_LINK_LOSSES], buffer);
-    }
+//    }
 }
 
 static void PrintLinkBattleResultsOnCard(void)
 {    
-    if (sTrainerCardDataPtr->hasLinkResults)
-    {
+//    if (sTrainerCardDataPtr->hasLinkResults)
+//    {
         AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], sTrainerCardHofDebutXPositions[sTrainerCardDataPtr->cardType], 51, 
             sTrainerCardTextColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_LINK_RECORD]);
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 130, 51, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_WIN_LOSS]);
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 144, 51, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_LINK_WINS]);
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 192, 51, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_LINK_LOSSES]);
-    }
+//        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 130, 51, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_WIN_LOSS]);
+//        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 144, 51, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_LINK_WINS]);
+//        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 192, 51, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_LINK_LOSSES]);
+//    }
 }
 
 static void BufferNumTrades(void)
 {
-    if (sTrainerCardDataPtr->hasTrades)
-    {
+//    if (sTrainerCardDataPtr->hasTrades)
+//    {
         StringCopy(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_TRADES], gText_PokemonTrades);
         ConvertIntToDecimalStringN(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_TRADE_COUNT], sTrainerCardDataPtr->trainerCard.rse.pokemonTrades, STR_CONV_MODE_RIGHT_ALIGN, 5);
-    }
+//    }
 }
 
 static void PrintTradesStringOnCard(void)
 {
-    if (sTrainerCardDataPtr->hasTrades)
-    {
+//    if (sTrainerCardDataPtr->hasTrades)
+//    {
         AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], sTrainerCardHofDebutXPositions[sTrainerCardDataPtr->cardType], 67, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_TRADES]);
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 186, 67, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_TRADE_COUNT]);
-    }
+//        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 186, 67, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_TRADE_COUNT]);
+//    }
 }
 
 static void BufferBerryCrushPoints(void)
 {
-    if (sTrainerCardDataPtr->cardType != CARD_TYPE_RSE)
-    {
+//    if (sTrainerCardDataPtr->cardType != CARD_TYPE_RSE)
+//    {
         StringCopy(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_BERRY_CRUSH], gText_BerryCrushes);
         ConvertIntToDecimalStringN(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_BERRY_CRUSH_COUNT], sTrainerCardDataPtr->trainerCard.berryCrushPoints, STR_CONV_MODE_RIGHT_ALIGN, 5);
-    }
+//    }
 }
 
 static void PrintBerryCrushStringOnCard(void)
 {
-    if (sTrainerCardDataPtr->cardType != CARD_TYPE_RSE && sTrainerCardDataPtr->trainerCard.berryCrushPoints)
-    {
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], sTrainerCardHofDebutXPositions[sTrainerCardDataPtr->cardType], 99, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_BERRY_CRUSH]);
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 186, 99, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_BERRY_CRUSH_COUNT]);
-    }
+//    if (sTrainerCardDataPtr->cardType != CARD_TYPE_RSE && sTrainerCardDataPtr->trainerCard.berryCrushPoints)
+//    {
+        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], sTrainerCardHofDebutXPositions[sTrainerCardDataPtr->cardType], 35, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_BERRY_CRUSH]);
+//        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 186, 35, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_BERRY_CRUSH_COUNT]);
+//    }
 }
 
 static void BufferUnionRoomStats(void)
 {
-    if (sTrainerCardDataPtr->cardType != CARD_TYPE_RSE)
-    {
+//    if (sTrainerCardDataPtr->cardType != CARD_TYPE_RSE)
+//    {
         StringCopy(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_UNION_ROOM], gText_UnionRoomTradesBattles);
         ConvertIntToDecimalStringN(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_UNION_ROOM_NUM], sTrainerCardDataPtr->trainerCard.unionRoomNum, STR_CONV_MODE_RIGHT_ALIGN, 5);
-    }
+//    }
 }
 
 static void PrintUnionStringOnCard(void)
 {
-    if (sTrainerCardDataPtr->cardType != CARD_TYPE_RSE && sTrainerCardDataPtr->trainerCard.unionRoomNum)
-    {
+//    if (sTrainerCardDataPtr->cardType != CARD_TYPE_RSE && sTrainerCardDataPtr->trainerCard.unionRoomNum)
+//    {
         AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], sTrainerCardHofDebutXPositions[sTrainerCardDataPtr->cardType], 83, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_UNION_ROOM]);
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 186, 83, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_UNION_ROOM_NUM]);
-    }
+//        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], 186, 83, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_UNION_ROOM_NUM]);
+//    }
 }
 
 static void PrintPokemonIconsOnCard(void)
