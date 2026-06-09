@@ -25,17 +25,17 @@ CeladonCity_GameCorner_EventScript_PrintTypeNormal::
 	end
 
 CeladonCity_GameCorner_EventScript_PrintTypeBlack::
-	setvar VAR_0x8004, MON_ICON_TINT_BLACK
+	setvar VAR_0x8004, MON_ICON_TINT_NORMAL
 	goto CeladonCity_GameCorner_EventScript_PrintPhoto
 	end
 
 CeladonCity_GameCorner_EventScript_PrintTypePink::
-	setvar VAR_0x8004, MON_ICON_TINT_PINK
+	setvar VAR_0x8004, MON_ICON_TINT_NORMAL
 	goto CeladonCity_GameCorner_EventScript_PrintPhoto
 	end
 
 CeladonCity_GameCorner_EventScript_PrintTypeSepia::
-	setvar VAR_0x8004, MON_ICON_TINT_SEPIA
+	setvar VAR_0x8004, MON_ICON_TINT_NORMAL
 	goto CeladonCity_GameCorner_EventScript_PrintPhoto
 	end
 
@@ -45,7 +45,6 @@ CeladonCity_GameCorner_EventScript_PrintPhoto::
 	playse MUS_PHOTO
 	dofieldeffect FLDEFF_PHOTO_FLASH
 	delay 60
-	special UpdateTrainerCardPhotoIcons
 	msgbox CeladonCity_GameCorner_Text_PrintIsReadyCheckTrainerCard
 	hidemoneybox
 	releaseall
