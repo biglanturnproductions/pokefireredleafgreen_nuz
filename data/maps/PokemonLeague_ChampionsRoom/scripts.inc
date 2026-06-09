@@ -114,6 +114,8 @@ PokemonLeague_ChampionsRoom_EventScript_Rematch::
 
 PokemonLeague_ChampionsRoom_EventScript_Intro::
 	msgbox PokemonLeague_ChampionsRoom_Text_Intro
+	setvar VAR_0x8004, MON_ICON_TINT_NORMAL
+	special UpdateTrainerCardPhotoIcons
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_RematchIntro::
